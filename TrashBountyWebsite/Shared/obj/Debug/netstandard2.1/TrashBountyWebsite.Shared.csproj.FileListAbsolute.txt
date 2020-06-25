@@ -1,0 +1,9 @@
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\bin\Debug\netstandard2.1\TrashBountyWebsite.Shared.deps.json
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\bin\Debug\netstandard2.1\TrashBountyWebsite.Shared.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\bin\Debug\netstandard2.1\TrashBountyWebsite.Shared.pdb
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.csprojAssemblyReference.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.AssemblyInfoInputs.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.AssemblyInfo.cs
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Shared\obj\Debug\netstandard2.1\TrashBountyWebsite.Shared.pdb

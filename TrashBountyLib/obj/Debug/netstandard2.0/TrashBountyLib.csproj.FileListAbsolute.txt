@@ -1,0 +1,9 @@
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\bin\Debug\netstandard2.0\TrashBountyLib.deps.json
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\bin\Debug\netstandard2.0\TrashBountyLib.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\bin\Debug\netstandard2.0\TrashBountyLib.pdb
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.csprojAssemblyReference.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.AssemblyInfoInputs.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.AssemblyInfo.cs
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.csproj.CoreCompileInputs.cache
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.pdb
