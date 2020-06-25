@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {}
+    "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {
+    "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj",
         "projectName": "TrashBountyWebsite.Shared",
-        "projectPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj",
-        "packagesPath": "C:\\Users\\Kaushik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj",
+        "packagesPath": "C:\\Users\\Mihir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kaushik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mihir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -63,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
