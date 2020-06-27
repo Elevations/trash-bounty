@@ -78,7 +78,12 @@ namespace TrashBountyAPI.Controllers
             if (!Encrypter.Validate(u.Password, user.Password))
                 return BadRequest(new LoginResult { Successful = false, Error = "Incorrect Password" });
 
-            var claims = new[] { new Claim(ClaimTypes.Name, user.Email )};
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.UserData, user.Id)
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -95,7 +100,7 @@ namespace TrashBountyAPI.Controllers
             return Ok(new LoginResult { Successful = true, Token = new JwtSecurityTokenHandler().WriteToken(token) });
         }
 
-        [HttpPut("{id:length(24)}")]
+        // [HttpPut("{id:length(24)}")]
         public IActionResult Update(string id, User userIn)
         {
             var user = _userService.Get(id);
@@ -110,7 +115,7 @@ namespace TrashBountyAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:length(24)}")]
+        // [HttpDelete("{id:length(24)}")]
         public IActionResult Delete(string id)
         {
             var user = _userService.Get(id);

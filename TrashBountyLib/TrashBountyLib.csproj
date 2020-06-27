@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\Misc\NewFile1.txt" />
+    <None Remove="Models\Trash\NewFile1.txt" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Bson" Version="2.10.4" />

@@ -1,10 +1,109 @@
-﻿<div>
-    <ul>
-        <li><i class="fas fa-bars" style="font-size: 32px;"></i></li>
+﻿@using System.Security.Claims
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+
+<style>
+    /* Navigation Styling */
+
+    nav div ul.main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100;
+        display: flex;
+        max-height: 64px;
+        min-height: 64px;
+        height: 64px;
+        background-color: #238531;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    }
+
+    nav div ul.main-nav li {
+        padding: 8px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav div ul.main-nav li:first-child {
+        cursor: pointer;
+    }
+
+    nav div ul.side-nav {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        padding-top: 16px;
+        font-size: 24px;
+        background-color: #fff;
+        height: calc(100vh - 80px);
+        top: 64px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        transition: 0.3s;
+        left: -200px;
+    }
+
+    nav div ul.side-nav li {
+        padding: 8px;
+    }
+
+    nav div ul.side-nav li:not(:last-child)
+    {
+        margin-bottom: 16px;
+    }
+
+    nav div ul.side-nav li a {
+        color: #ccc;
+        text-decoration: none;
+    }
+
+    nav div ul.side-nav li a svg, nav div ul.side-nav li a span {
+        padding-right: 16px;
+    }
+
+    nav div ul.side-nav.opened {
+        left: 0;
+    }
+</style>
+
+<div>
+    <ul class="main-nav">
+        <li @onclick="ToggleNav"><i class="fas fa-bars" style="font-size: 32px;"></i></li>
+    </ul>
+    <ul class="side-nav @sideNavStatus">
+        <AuthorizeView>
+            <Authorized>
+                <li><a @onclick="ToggleNav" href="/profile/@context.User.Claims.First(c => c.Type == ClaimTypes.UserData).Value"><i class="fas fa-user"></i><span>PROFILE</span></a></li>
+                <li><a @onclick="ToggleNav" href="/dashboard"><i class="fas fa-trash"></i><span>BOUNTIES</span></a></li>
+                <li><a @onclick="Logout"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a></li>
+            </Authorized>
+            <NotAuthorized>
+                <li><a @onclick="ToggleNav" href="/login"><i class="fas fa-sign-in-alt"></i><span>SIGN IN</span></a></li>
+            </NotAuthorized>
+        </AuthorizeView>
     </ul>
 </div>
 
 @code
 {
+    private string sideNavStatus = "closed";
 
+    private void ToggleNav(MouseEventArgs e)
+    {
+        if (sideNavStatus.Equals("closed"))
+        {
+            sideNavStatus = "opened";
+        }
+        else
+        {
+            sideNavStatus = "closed";
+        }
+    }
+
+    private void Logout()
+    {
+        AuthService.Logout();
+        NavigationManager.NavigateTo("/login");
+    }
 }

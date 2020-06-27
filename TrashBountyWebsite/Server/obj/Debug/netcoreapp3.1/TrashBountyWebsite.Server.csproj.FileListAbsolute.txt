@@ -114,3 +114,5 @@ C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug
 C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
 C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
 C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\Blazor.FileReader.dll

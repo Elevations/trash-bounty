@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrashBountyWebsite.Client",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrashBountyWebsite.Shared", "TrashBountyWebsite\Shared\TrashBountyWebsite.Shared.csproj", "{03B27D00-8E80-4C7F-AF8B-636F3F79F91C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrashBountyLib", "TrashBountyLib\TrashBountyLib.csproj", "{DC09E6AF-7910-4ECB-AB08-926B03F19C3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrashBountyLib", "TrashBountyLib\TrashBountyLib.csproj", "{DC09E6AF-7910-4ECB-AB08-926B03F19C3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="C:\Users\Kaushik\source\repos\TrashBountyAPI\TrashBountyWebsite\Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="_content/Tewr.Blazor.FileReader" Path="C:\Users\Kaushik\.nuget\packages\tewr.blazor.filereader\1.6.0.20166\build\..\staticwebassets\" />
 </StaticWebAssets>

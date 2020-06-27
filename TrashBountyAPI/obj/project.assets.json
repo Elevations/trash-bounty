@@ -6243,12 +6243,11 @@
       ]
     },
     "System.Dynamic.Runtime/4.0.11": {
-      "sha512": "db34f6LHYM0U0JpE+sOmjar27BnqTVkbLJhgfwMpTdgTigG/Hna3m2MYVwnFzGGKnEJk2UXFuoVTr8WUbU91/A==",
+      "sha512": "L3nKx3UvWn8dpbWlsbHbBJTcAx63++sEV33WYqoZqEhjsckDmxUNmL+qZ1nFJhX11Bd/t7cdXJRyCNwvGs7eMw==",
       "type": "package",
       "path": "system.dynamic.runtime/4.0.11",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6896,12 +6895,11 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "8D6qOI0kKEDTWVTnuoHX9ID1iBKrOlDU3p8UfHVuf5xssQcJbcnjG3iH22rQJMMJ6Cy7bbaodh1MEQX+rW0nIw==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/monoandroid10/_._",
@@ -9451,23 +9449,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mihir\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Kaushik\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyAPI\\TrashBountyAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyAPI\\TrashBountyAPI.csproj",
       "projectName": "TrashBountyAPI",
-      "projectPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyAPI\\TrashBountyAPI.csproj",
-      "packagesPath": "C:\\Users\\Mihir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyAPI\\obj\\",
+      "projectPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyAPI\\TrashBountyAPI.csproj",
+      "packagesPath": "C:\\Users\\Kaushik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mihir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kaushik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9481,11 +9481,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyLib\\TrashBountyLib.csproj": {
-              "projectPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyLib\\TrashBountyLib.csproj"
+            "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyLib\\TrashBountyLib.csproj": {
+              "projectPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyLib\\TrashBountyLib.csproj"
             },
-            "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {
-              "projectPath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj"
+            "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj": {
+              "projectPath": "C:\\Users\\Kaushik\\source\\repos\\TrashBountyAPI\\TrashBountyWebsite\\Shared\\TrashBountyWebsite.Shared.csproj"
             }
           }
         }
@@ -9546,7 +9546,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

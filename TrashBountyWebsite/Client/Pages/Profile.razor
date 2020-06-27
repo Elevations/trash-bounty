@@ -1,0 +1,36 @@
+﻿@page "/profile/{Id}"
+@inject HttpClient Http
+
+<style>
+    #profile-container {
+        width: 100vw;
+        height: calc(100vh - 64px);
+        overflow-y: scroll;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div id="profile-container">
+    <div class="profile-item">
+        <h1>@username</h1>
+    </div>
+</div>
+
+
+@code
+{
+    [Parameter]
+    public string Id { get; set; }
+
+    private string username = "";
+
+    private User user = new User();
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await Http.GetFromJsonAsync<User>($"https://localhost:44399/api/users/{Id}");
+        username = user.Username;
+    }
+}

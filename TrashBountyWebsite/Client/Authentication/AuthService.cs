@@ -52,6 +52,7 @@ namespace TrashBountyWebsite.Client.Authentication
             var task = await _httpClient.GetAsync("https://localhost:44399/api/users");
             var jsonString = await task.Content.ReadAsStringAsync();
             users = JsonConvert.DeserializeObject<List<User>>(jsonString);
+            // System.Console.WriteLine(jsonString);
             User realUser = users.Find(u => u.Email == user.Email);
 
             if (realUser == null)

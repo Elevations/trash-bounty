@@ -1,14 +1,27 @@
 ﻿@page "/dashboard"
+@using System.Security.Claims
+
+<style>
+    #post-bounty {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+</style>
 
 <AuthorizeView>
     <Authorized>
-        Hello @context.User.Identity.Name
+        Hello @context.User.Claims.First(c => c.Type == ClaimTypes.Name).Value
     </Authorized>
 </AuthorizeView>
 
+<div id="post-bounty" @onclick="PostBounty">
+    <i class="fas fa-plus-circle" style="font-size:64px;color:#238531"></i>
+</div>
+
 @code
 {
-    async Task OnInitializedAsync()
+    private void PostBounty()
     {
 
     }

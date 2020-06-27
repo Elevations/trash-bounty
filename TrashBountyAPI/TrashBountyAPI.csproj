@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\NewFile.txt" />
+    <None Remove="Service\NewFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
@@ -17,6 +22,10 @@
   <ItemGroup>
     <ProjectReference Include="..\TrashBountyLib\TrashBountyLib.csproj" />
     <ProjectReference Include="..\TrashBountyWebsite\Shared\TrashBountyWebsite.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 

@@ -80,6 +80,8 @@ namespace TrashBountyAPI
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthentication();

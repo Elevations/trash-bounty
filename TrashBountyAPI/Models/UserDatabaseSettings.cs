@@ -18,4 +18,20 @@ namespace TrashBountyAPI.Models
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }
+
+    public class DatabaseSettings
+    {
+        public string UsersCollectionName { get; set; }
+        public string TrashCollectionName { get; set; }
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
+    }
+
+    public interface IDatabaseSettings
+    {
+        string UsersCollectionName { get; set; }
+        string TrashCollectionName { get; set;  }
+        string ConnectionString { get; set; }
+        string DatabaseName { get; set; }
+    }
 }

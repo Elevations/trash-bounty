@@ -30,5 +30,13 @@ namespace TrashBountyLib.Models
         [Required]
         [JsonProperty("Password")]
         public string Password { get; set; }
+
+        [BsonElement("Points")]
+        [JsonProperty("Points")]
+        public int Points { get; set; }
+
+        [BsonElement("ProfileIconLink")]
+        [JsonProperty("ProfileIconLink")]
+        public string ProfileIconLink { get; set; }
     }
 }
