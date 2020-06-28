@@ -97,11 +97,10 @@
 @code
 {
     private ReturningUser user = new ReturningUser();
-    List<User> users = new List<User>();
 
     protected override async Task OnInitializedAsync()
     {
-        users = await Http.GetFromJsonAsync<List<User>>("https://localhost:44399/api/users");
+    
     }
 
     private async Task SignInUser()

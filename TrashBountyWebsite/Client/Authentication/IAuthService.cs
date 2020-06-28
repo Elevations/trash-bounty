@@ -8,5 +8,6 @@ namespace TrashBountyWebsite.Client.Authentication
     {
         Task<RegisterResult> Register(NewUser user);
         Task<LoginResult> Login(ReturningUser user);
+        Task Logout();
     }
 }

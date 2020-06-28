@@ -264,9 +264,6 @@ C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\bin\Debug\netcoreapp3.1\T
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.csprojAssemblyReference.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.AssemblyInfoInputs.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.AssemblyInfo.cs
-C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.csproj.CoreCompileInputs.cache
-C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.csproj.CopyComplete
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\staticwebassets\TrashBountyAPI.StaticWebAssets.Manifest.cache
@@ -274,3 +271,7 @@ C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\s
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.dll
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.pdb
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.genruntimeconfig.cache
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.csproj.CoreCompileInputs.cache
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyAPI\obj\Debug\netcoreapp3.1\TrashBountyAPI.MvcApplicationPartsAssemblyInfo.cache

@@ -138,6 +138,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.10.4, )"
@@ -155,6 +159,10 @@
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
             }
           },
           "imports": [

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrashBountyLib.Models;
-using TrashBountyAPI.Models;
 
 namespace TrashBountyAPI.Service
 {
@@ -13,7 +12,7 @@ namespace TrashBountyAPI.Service
     {
         private readonly IMongoCollection<User> _tempUsersColl;
 
-        public UserService(IUserDatabaseSettings settings)
+        public UserService(IDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
@@ -21,8 +20,10 @@ namespace TrashBountyAPI.Service
             _tempUsersColl = database.GetCollection<User>(settings.UsersCollectionName);
         }
 
-        public List<User> Get() =>
-            _tempUsersColl.Find(user => true).ToList();
+        public List<User> Get()
+        {
+            return _tempUsersColl.Find(user => true).ToList();
+        }
 
         public User Get(string id) =>
             _tempUsersColl.Find<User>(user => user.Id == id).FirstOrDefault();

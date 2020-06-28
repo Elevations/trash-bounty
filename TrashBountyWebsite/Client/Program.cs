@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using TrashBountyWebsite.Client.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Blazored.LocalStorage;
+using Blazor.FileReader;
 
 namespace TrashBountyWebsite.Client
 {
@@ -26,6 +27,7 @@ namespace TrashBountyWebsite.Client
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddAuthenticationCore();
             builder.Services.AddAuthorizationCore();
+            builder.Services.AddFileReaderService();
 
             await builder.Build().RunAsync();
         }

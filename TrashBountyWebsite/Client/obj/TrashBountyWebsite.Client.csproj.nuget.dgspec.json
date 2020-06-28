@@ -42,6 +42,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.10.4, )"
@@ -59,6 +63,10 @@
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
             }
           },
           "imports": [
@@ -120,6 +128,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.2.0, )"
+            },
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[2.1.6, )"
@@ -129,6 +141,10 @@
               "version": "[3.1.5, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
               "target": "Package",
               "version": "[3.2.0, )"
             },
@@ -161,6 +177,10 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[3.2.1, )"
+            },
+            "Tewr.Blazor.FileReader": {
+              "target": "Package",
+              "version": "[1.6.0.20166, )"
             }
           },
           "imports": [

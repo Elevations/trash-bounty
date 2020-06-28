@@ -14,7 +14,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using TrashBountyAPI.Models;
 using TrashBountyAPI.Service;
 
 namespace TrashBountyAPI
@@ -34,11 +33,11 @@ namespace TrashBountyAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // requires using Microsoft.Extensions.Options
-            services.Configure<UserDatabaseSettings>(
-                Configuration.GetSection(nameof(UserDatabaseSettings)));
+            services.Configure<DatabaseSettings>(
+                Configuration.GetSection(nameof(DatabaseSettings)));
 
-            services.AddSingleton<IUserDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<UserDatabaseSettings>>().Value);
+            services.AddSingleton<IDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
             services.AddSingleton<UserService>();
 
@@ -59,11 +58,12 @@ namespace TrashBountyAPI
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
-                                  builder => {
-                                    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
-                                  });
+                    builder =>
+                    {
+                        builder.AllowAnyHeader().WithMethods("GET", "POST").AllowAnyOrigin();
+                    });
             });
-
+            
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.UseMemberCasing());
         }
@@ -79,6 +79,8 @@ namespace TrashBountyAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseStaticFiles();
 
             app.UseCors(MyAllowSpecificOrigins);
 

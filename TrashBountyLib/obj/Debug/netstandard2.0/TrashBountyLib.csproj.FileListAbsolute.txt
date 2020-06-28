@@ -13,6 +13,6 @@ C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\bin\Debug\netstandard2.0\
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.csprojAssemblyReference.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.AssemblyInfoInputs.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.AssemblyInfo.cs
-C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.csproj.CoreCompileInputs.cache
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.dll
 C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.pdb
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyLib\obj\Debug\netstandard2.0\TrashBountyLib.csproj.CoreCompileInputs.cache

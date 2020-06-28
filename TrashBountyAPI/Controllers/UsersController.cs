@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TrashBountyAPI.Models;
 using TrashBountyAPI.Service;
 using Microsoft.AspNetCore.Cors;
 using TrashBountyLib.Models;
@@ -32,11 +31,15 @@ namespace TrashBountyAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<User>> Get() =>
-            _userService.Get();
+        public ActionResult<List<APIUser>> Get()
+        {
+            List<User> users = _userService.Get();
+            return users.Select(u => new APIUser() { Id = u.Id, Email = u.Email, Username = u.Username, ProfileImageLink = u.ProfileImageLink }).ToList();
+        }
+            
 
         [HttpGet("{id:length(24)}", Name = "GetUser")]
-        public ActionResult<User> Get(string id)
+        public ActionResult<APIUser> Get(string id)
         {
             var user = _userService.Get(id);
 
@@ -45,7 +48,7 @@ namespace TrashBountyAPI.Controllers
                 return NotFound();
             }
 
-            return user;
+            return new APIUser() { Id = user.Id, Email = user.Email, Username = user.Username, ProfileImageLink = user.ProfileImageLink };
         }
 
         // Register
@@ -57,7 +60,7 @@ namespace TrashBountyAPI.Controllers
             users = _userService.Get();
 
             // Email check
-            User newUser = new User { Username = user.Username, Password = Encrypter.Hash(user.Password), Email = user.Email }; // seems like some naming stuff is wrong here - actually no
+            User newUser = new User { Username = user.Username, Password = Encrypter.Hash(user.Password), Email = user.Email };
             if (users.FindIndex(u => u.Email.Equals(user.Email)) != -1)
             {
                 Console.WriteLine("Email already taken");
@@ -78,7 +81,12 @@ namespace TrashBountyAPI.Controllers
             if (!Encrypter.Validate(u.Password, user.Password))
                 return BadRequest(new LoginResult { Successful = false, Error = "Incorrect Password" });
 
-            var claims = new[] { new Claim(ClaimTypes.Name, user.Email )};
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.UserData, user.Id)
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

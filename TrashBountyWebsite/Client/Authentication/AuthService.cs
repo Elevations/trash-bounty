@@ -5,6 +5,7 @@ using Blazored.LocalStorage;
 using System.Threading.Tasks;
 using System.Net.Http.Json;
  // Figure out this package thing
+using TrashBountyLib;
 using TrashBountyLib.Models.Results;
 using TrashBountyWebsite.Client.Pages;
 using TrashBountyLib.Models;
@@ -37,17 +38,9 @@ namespace TrashBountyWebsite.Client.Authentication
 
         public async Task<LoginResult> Login(ReturningUser user)
         {
-            /*
-            //var loginAsJson = JsonSerializer.Serialize(user);
-            //var response = await _httpClient.PostAsync($"https://localhost:44399/api/users/{user.Id}", new StringContent(loginAsJson, Encoding.UTF8, "application/json"));
-            */ // bruh i had already commented them out [insert nooo, you can't just mlti-line comments which are already single lined, haha- comment go brrr]
 
             // Find the id of the user based on email
             List<User> users = new List<User>();
-            /*
-            users = await _httpClient.GetFromJsonAsync<List<User>>("https://localhost:44399/api/users"); //ah yes, errors in comments, my favorite >:L(
-            User realUser = users.Find(u => u.Email == user.Email);
-            */
 
             var task = await _httpClient.GetAsync("https://localhost:44399/api/users");
             var jsonString = await task.Content.ReadAsStringAsync();
@@ -56,6 +49,9 @@ namespace TrashBountyWebsite.Client.Authentication
 
             if (realUser == null)
                 return new LoginResult { Successful = false, Error = "No user exists with that email" };
+
+            //if (!Encrypter.Validate(user.Password, realUser.Password))
+                //return new LoginResult { Successful = false, Error = "Incorrect password" };
 
             var response = await _httpClient.PostAsJsonAsync($"https://localhost:44399/api/users/{realUser.Id}", user);
             var loginResult = System.Text.Json.JsonSerializer.Deserialize<LoginResult>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mCE7GNlJVHR33TYkDjTSscSjbuU20dLxtO7ITrXtUq0lnO2J/S8a8O58CPf7QuEK0bAFM/Xt24kz/SP4gDgy4A==",
+  "dgSpecHash": "fKoD8v4oM2XdsUbojBPhBt8sgIPbMX+fVJyKSg8e7Jn2RV/wa2UQ3N0Yajf48u0RWQo+LNROuuy+n7CCM/UuNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\TrashBountyWebsite.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mihir\\.nuget\\packages\\blazored.localstorage\\2.1.6\\blazored.localstorage.2.1.6.nupkg.sha512",
+    "C:\\Users\\Mihir\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
@@ -16,6 +17,7 @@
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.4\\microsoft.aspnetcore.components.forms.3.1.4.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.4\\microsoft.aspnetcore.components.web.3.1.4.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\3.2.0\\microsoft.aspnetcore.components.webassembly.3.2.0.nupkg.sha512",
+    "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\3.2.0\\microsoft.aspnetcore.components.webassembly.authentication.3.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.build\\3.2.0\\microsoft.aspnetcore.components.webassembly.build.3.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\3.2.0\\microsoft.aspnetcore.components.webassembly.devserver.3.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.httphandler\\3.2.0\\microsoft.aspnetcore.components.webassembly.httphandler.3.2.0.nupkg.sha512",
@@ -29,7 +31,7 @@
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.5\\microsoft.aspnetcore.metadata.3.1.5.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.5\\microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.mvc.dataannotations\\2.2.0\\microsoft.aspnetcore.mvc.dataannotations.2.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.responsecaching.abstractions\\2.2.0\\microsoft.aspnetcore.responsecaching.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
@@ -168,7 +170,8 @@
     "C:\\Users\\Mihir\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mihir\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Mihir\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Mihir\\.nuget\\packages\\tewr.blazor.filereader\\1.6.0.20166\\tewr.blazor.filereader.1.6.0.20166.nupkg.sha512"
   ],
   "logs": []
 }
