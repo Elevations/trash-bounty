@@ -128,9 +128,17 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "AspNetMonsters.Blazor.Geolocation": {
+              "target": "Package",
+              "version": "[0.5.0-preview1, )"
+            },
             "BlazorInputFile": {
               "target": "Package",
               "version": "[0.2.0, )"
+            },
+            "BlazorLeaflet": {
+              "target": "Package",
+              "version": "[0.4.0-alpha, )"
             },
             "Blazored.LocalStorage": {
               "target": "Package",

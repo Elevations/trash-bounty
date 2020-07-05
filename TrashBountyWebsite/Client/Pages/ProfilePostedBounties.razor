@@ -1,0 +1,92 @@
+﻿@page "/profile/{Id}/posted-bounties"
+
+@using BlazorLeaflet
+@using BlazorLeaflet.Models
+
+@inject HttpClient Http
+@inject IJSRuntime jsRuntime
+
+<style>
+    .bounty-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bounty {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        margin-bottom: 16px;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 80vw;
+    }
+
+    .bounty-map-container {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .bounty-description {
+        width: 100%;
+        background-color: #fff;
+        padding: 8px;
+    }
+
+    .bounty-poster-img {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    }
+</style>
+
+<div class="bounty-list">
+    @if (user.PostedBountyIds != null)
+    {
+        foreach (string Id in user.PostedBountyIds)
+        {
+            Bounty b = bounties.FirstOrDefault(b => b.Id.Equals(Id));
+            var marker = new Marker((float) b.Latitude, (float) b.Longitude);
+            marker.Tooltip = new Tooltip { Content = $"Posted by {user.Username}" };
+
+            Map newMap = new Map(jsRuntime);
+
+            newMap.Layers.Add(new TileLayer
+            {
+                UrlTemplate = "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                Attribution = "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+            });
+
+            newMap.Layers.Add(marker);
+
+
+            maps.Add(newMap);
+
+            <div class="bounty">
+                <div class="bounty-map-container">
+                    <LeafletMap Map="maps[maps.Count() - 1]" InitialPosition="new System.Drawing.PointF((float) b.Latitude, (float) b.Longitude)" InitialZoom="4.8f" />
+                </div>
+                <div class="bounty-description">
+                    <img class="bounty-poster-img" src="@user.ProfileImageLink" width="64" height="64">
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@code
+{
+    [Parameter]
+    public string Id { get; set; }
+
+    private APIUser user = new APIUser();
+    private List<Bounty> bounties;
+    private List<Map> maps = new List<Map>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await Http.GetFromJsonAsync<APIUser>($"https://localhost:44399/api/users/{Id}");
+        bounties = await Http.GetFromJsonAsync<List<Bounty>>("https://localhost:44399/api/bounty/open/100");
+    }
+}

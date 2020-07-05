@@ -34,7 +34,7 @@ namespace TrashBountyAPI.Controllers
         public ActionResult<List<APIUser>> Get()
         {
             List<User> users = _userService.Get();
-            return users.Select(u => new APIUser() { Id = u.Id, Email = u.Email, Username = u.Username, ProfileImageLink = u.ProfileImageLink }).ToList();
+            return users.Select(u => new APIUser() { Id = u.Id, Email = u.Email, Username = u.Username, ProfileImageLink = u.ProfileImageLink, PostedBountyIds = u.PostedBountyIds }).ToList();
         }
             
 
@@ -48,7 +48,7 @@ namespace TrashBountyAPI.Controllers
                 return NotFound();
             }
 
-            return new APIUser() { Id = user.Id, Email = user.Email, Username = user.Username, ProfileImageLink = user.ProfileImageLink };
+            return new APIUser() { Id = user.Id, Email = user.Email, Username = user.Username, ProfileImageLink = user.ProfileImageLink, PostedBountyIds = user.PostedBountyIds };
         }
 
         // Register

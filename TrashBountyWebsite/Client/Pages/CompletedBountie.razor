@@ -1,0 +1,49 @@
+﻿@using BlazorLeaflet
+@using BlazorLeaflet.Models
+
+@inject HttpClient Http
+@inject IJSRuntime jsRuntime
+
+<div class="bounty-list">
+    @foreach (Bounty bounty in bounties)
+    {
+        APIUser u = users.FirstOrDefault(u => u.Id.Equals(bounty.CompletedBounty.UserIds.First()));
+        var marker = new Marker((float) bounty.Latitude, (float) bounty.Longitude);
+
+        Map newMap = new Map(jsRuntime);
+
+        newMap.Layers.Add(new TileLayer
+        {
+            UrlTemplate = "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            Attribution = "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        });
+
+        newMap.Layers.Add(marker);
+
+
+        maps.Add(newMap);
+
+        <div class="completed-bounty">
+            <div class="completed-bounty-image">
+                <img src="@bounty.CompletedBounty.CompletedBountyPictureLinks.First()" />
+            </div>
+            <div class="completed-bounty-info">
+                <img class="completed-bounty-user-profile" src="@u.ProfileImageLink" />
+                <p class="completed-bounty-description">@bounty.Description</p>
+            </div>
+        </div>
+        }
+</div>
+
+@code
+{
+    private List<Bounty> bounties;
+    private List<APIUser> users;
+    private List<Map> maps = new List<Map>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        bounties = await Http.GetFromJsonAsync<List<Bounty>>("https://localhost:44399/api/bounty/close/100");
+        users = await Http.GetFromJsonAsync<List<APIUser>>($"https://localhost:44399/api/users");
+    }
+}

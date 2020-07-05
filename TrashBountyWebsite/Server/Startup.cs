@@ -28,7 +28,6 @@ namespace TrashBountyWebsite.Server
             services.AddRazorPages();
             services.AddSingleton<HttpClient>();
             services.AddHttpClient();
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

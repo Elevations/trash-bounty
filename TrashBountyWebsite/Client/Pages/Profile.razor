@@ -7,8 +7,13 @@
         height: calc(100vh - 64px);
         overflow-y: scroll;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .profile-item:not(:last-child) {
+        margin-bottom: 16px;
     }
 </style>
 

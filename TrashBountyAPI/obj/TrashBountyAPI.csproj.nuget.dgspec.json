@@ -76,6 +76,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.10.4, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [

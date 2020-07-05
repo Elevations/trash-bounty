@@ -1,12 +1,402 @@
 ﻿@page "/dashboard"
 
+@using BlazorLeaflet
+@using BlazorLeaflet.Models
+@using System.IO
+@using Blazor.FileReader
+
+@inject LocationService LocationService
+@inject HttpClient HttpClient
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IJSRuntime jsRuntime
+@inject IFileReaderService fileReader
+
+<style>
+    #post-bounty {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        border-radius: 50%;
+        border: 4px solid #238531;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+        padding: 8px 10px;
+        z-index: 1003;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+        #post-bounty.opened {
+            transform: rotate(45deg);
+        }
+
+    .bounty-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bounty {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        margin-bottom: 16px;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 80vw;
+        position: relative;
+    }
+
+    .bounty-map-container {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .bounty-description {
+        width: 100%;
+        background-color: #fff;
+        padding: 8px;
+        display: flex;
+    }
+
+    .bounty-poster-img {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    }
+
+    .complete-bounty-button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        border-radius: 50%;
+        border: 4px solid #238531;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+        padding: 8px 10px;
+        z-index: 1001;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+    /* Form Styling */
+    #post-bounty-form {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        bottom: -100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 1002;
+        background-color: #0007;
+    }
+
+        #post-bounty-form.opened {
+            bottom: 0;
+        }
+
+        #post-bounty-form form {
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        }
+
+    .form-input {
+        margin-bottom: 32px;
+        position: relative;
+    }
+
+        .form-input input {
+            display: block;
+            border: none;
+            font-size: 24px;
+            border-bottom: 2px solid #238531;
+            font-family: 'Public Sans', sans-serif;
+            box-shadow: none !important;
+            transition: 0.3s;
+        }
+
+            .form-input input.invalid {
+                border-bottom: 2px solid #ff4d4d;
+            }
+
+    input[type="submit"] {
+        border: 4px solid #238531;
+        border-radius: 64px;
+        background-color: #fff;
+        color: #238531;
+        font-size: 1rem;
+        padding: 16px;
+        margin-top: 16px;
+        transition: 0.3s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        cursor: pointer;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #238531;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+    .form-input label {
+        display: block;
+        font-family: 'Public Sans', sans-serif;
+        color: #ccc;
+    }
+
+    .form-input .validation-message {
+        font-family: 'Public Sans', sans-serif;
+        color: #ff4d4d;
+        position: absolute;
+        bottom: -20px; /* 16 for the font height and 4 for padding */
+        white-space: nowrap;
+        animation: fadein 0.3s ease forwards;
+    }
+
+    #complete-bounty-form {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        bottom: -100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 1002;
+        background-color: #0007;
+    }
+
+        #complete-bounty-form.opened {
+            bottom: 0;
+        }
+
+        #complete-bounty-form form {
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+        }
+
+    ::placeholder {
+        color: #ccc;
+    }
+
+    @@keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="bounty-list">
+    @if (bounties != null)
+    {
+        foreach (Bounty b in bounties)
+        {
+            APIUser poster = users.FirstOrDefault(u => u.Id == b.PosterId);
+            var marker = new Marker((float) b.Latitude, (float) b.Longitude);
+            marker.Tooltip = new Tooltip { Content = $"Posted by {poster.Username}" };
+
+            Map newMap = new Map(jsRuntime);
+
+            newMap.Layers.Add(new TileLayer
+            {
+                UrlTemplate = "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                Attribution = "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+            });
+
+            newMap.Layers.Add(marker);
+
+
+            maps.Add(newMap);
+
+            <div class="bounty">
+                <div class="bounty-map-container">
+                    <LeafletMap Map="maps[maps.Count() - 1]" InitialPosition="new System.Drawing.PointF((float) b.Latitude, (float) b.Longitude)" InitialZoom="4.8f" />
+                </div>
+                <div class="bounty-description">
+                    <img class="bounty-poster-img" src="@poster.ProfileImageLink" width="64" height="64">
+                    <p>@b.Description</p>
+                </div>
+                @foreach (string link in b.BountyPictureLinks)
+                {
+                    <img src="@link" />
+                }
+                <div class="complete-bounty-button" @onclick="@(e => OpenCompleteBountyForm(b.Id))">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+<AuthorizeView Context="PostBountyAuthForm">
+    <div id="post-bounty-form" class="@postBountyFormStatus">
+        <EditForm model="@newBounty" OnValidSubmit="@PostBounty">
+            <DataAnnotationsValidator />
+            <div class="form-input">
+                <label for="description">Description</label>
+                <InputText id="description" @bind-Value="newBounty.Description" />
+                <ValidationMessage For="@(() => newBounty.Description)" />
+            </div>
+            <div class="form-input">
+                <input type="file" @ref="inputReference" />
+            </div>
+            <input type="submit" value="Post Bounty" />
+        </EditForm>
+    </div>
+</AuthorizeView>
+
+<AuthorizeView Context="CompleteBountyAuthForm">
+    <div id="complete-bounty-form" class="@completeBountyFormStatus">
+        <EditForm Model="newCompletedBounty" OnValidSubmit="@CompleteBounty">
+            <div class="form-input">
+                <input type="file" @ref="completedBountyImage" />
+            </div>
+            <input type="submit" value="Completed Bounty" />
+        </EditForm> 
+    </div>
+</AuthorizeView>
+
 <AuthorizeView>
-    <Authorized>
-        Hello @context.User.Identity.Name
-    </Authorized>
+    <div id="post-bounty" class="@buttonStatus" @onclick="ButtonEvent">
+        <i class="fas fa-plus" style="font-size:32px;color:#238531"></i>
+    </div>
 </AuthorizeView>
 
 @code
 {
-    
+    private Location location;
+
+    ElementReference inputReference;
+    ElementReference completedBountyImage;
+
+    private List<Bounty> bounties;
+    private List<APIUser> users;
+
+    private List<Map> maps = new List<Map>();
+
+    private NewBounty newBounty = new NewBounty();
+    private NewCompletedBounty newCompletedBounty = new NewCompletedBounty();
+
+    private string postBountyFormStatus = "closed";
+    private string completeBountyFormStatus = "closed";
+    private string buttonStatus = "closed";
+
+    private string selectedBounty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        location = await LocationService.GetLocationAsync();
+        bounties = await HttpClient.GetFromJsonAsync<List<Bounty>>("https://localhost:44399/api/bounty/open/100");
+        users = await HttpClient.GetFromJsonAsync<List<APIUser>>($"https://localhost:44399/api/users");
+    }
+
+    private async Task PostBounty()
+    {
+        // Get the image
+        var file = (await fileReader.CreateReference(inputReference).EnumerateFilesAsync()).FirstOrDefault();
+
+        if (file == null)
+        {
+            return;
+        }
+
+        using (var ms = await file.CreateMemoryStreamAsync((int) (await file.ReadFileInfoAsync()).Size))
+        {
+            newBounty.ImageData = Convert.ToBase64String(ms.ToArray());
+        }
+
+        if (newBounty.ImageData == null)
+        {
+            Console.WriteLine("There is no image ._.");
+            return;
+        }
+
+        // Re-get location
+        location = await LocationService.GetLocationAsync();
+        newBounty.Latitude = location.Latitude;
+        newBounty.Longitude = location.Longitude;
+
+        // Make http request
+        var token = await localStorage.GetItemAsync<string>("authToken");
+
+        HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var response = await HttpClient.PostAsJsonAsync($"https://localhost:44399/api/bounty/open", newBounty);
+        HttpClient.DefaultRequestHeaders.Remove("Authorization");
+
+        postBountyFormStatus = "closed";
+        buttonStatus = "closed";
+    }
+
+    private async Task CompleteBounty()
+    {
+        if (selectedBounty == null)
+            return;
+
+        // Get the image
+        var file = (await fileReader.CreateReference(completedBountyImage).EnumerateFilesAsync()).FirstOrDefault();
+
+        if (file == null)
+        {
+            return;
+        }
+
+        using (var ms = await file.CreateMemoryStreamAsync((int)(await file.ReadFileInfoAsync()).Size))
+        {
+            newCompletedBounty.ImageData = Convert.ToBase64String(ms.ToArray());
+        }
+
+        if (newCompletedBounty.ImageData == null)
+        {
+            Console.WriteLine("There is no image ._.");
+            return;
+        }
+
+        newCompletedBounty.BountyId = selectedBounty;
+
+        // Make http request
+        var token = await localStorage.GetItemAsync<string>("authToken");
+
+        HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var response = await HttpClient.PostAsJsonAsync($"https://localhost:44399/api/bounty/close", newCompletedBounty);
+        HttpClient.DefaultRequestHeaders.Remove("Authorization");
+
+        completeBountyFormStatus = "closed";
+        buttonStatus = "closed";
+    }
+
+    private void ButtonEvent(MouseEventArgs e)
+    {
+        if (buttonStatus.Equals("closed"))
+        {
+            buttonStatus = "opened";
+            postBountyFormStatus = "opened";
+        }
+        else
+        {
+            buttonStatus = "closed";
+            postBountyFormStatus = "closed";
+            completeBountyFormStatus = "closed";
+            selectedBounty = null;
+        }
+    }
+
+    private void OpenCompleteBountyForm(string bountyId)
+    {
+        selectedBounty = bountyId;
+        buttonStatus = "opened";
+        completeBountyFormStatus = "opened";
+    }
+
+    private class Foo
+    {
+
+    };
 }

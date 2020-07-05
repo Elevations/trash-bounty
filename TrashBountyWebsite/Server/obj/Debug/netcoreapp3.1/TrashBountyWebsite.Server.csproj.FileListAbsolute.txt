@@ -230,3 +230,9 @@ C:\Users\Mihir\source\repos\TrashBounty\TrashBountyWebsite\Server\obj\Debug\netc
 C:\Users\Mihir\source\repos\TrashBounty\TrashBountyWebsite\Server\obj\Debug\netcoreapp3.1\TrashBountyWebsite.Server.dll
 C:\Users\Mihir\source\repos\TrashBounty\TrashBountyWebsite\Server\obj\Debug\netcoreapp3.1\TrashBountyWebsite.Server.pdb
 C:\Users\Mihir\source\repos\TrashBounty\TrashBountyWebsite\Server\obj\Debug\netcoreapp3.1\TrashBountyWebsite.Server.genruntimeconfig.cache
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\AspNetMonsters.Blazor.Geolocation.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\BlazorInputFile.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\BlazorLeaflet.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Mihir\Source\Repos\TrashBounty\TrashBountyWebsite\Server\bin\Debug\netcoreapp3.1\Blazor.FileReader.dll

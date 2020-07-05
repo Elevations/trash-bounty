@@ -34,5 +34,27 @@ namespace TrashBountyLib.Models
         [BsonElement("ProfileImageLink")]
         [JsonProperty("ProfileImageLink")]
         public string ProfileImageLink { get; set; }
+
+        [BsonElement("PostedBountyIds")]
+        [JsonProperty("PostedBountyIds")]
+        public List<string> PostedBountyIds = new List<string>();
+
+        [BsonElement("CompletedBountyIds")]
+        [JsonProperty("CompletedBountyIds")]
+        public List<string> CompletedBountyIds = new List<string>();
+
+        [BsonElement("Points")]
+        [JsonProperty("Points")]
+        public int Points { get; set; }
+
+        [BsonElement("BountyPoints")]
+        [JsonProperty("BountyPoints")]
+        public List<BountyPoint> BountyPoints = new List<BountyPoint>();
+    }
+
+    public struct BountyPoint
+    {
+        public string CompletedBountyId { get; set; }
+        public int Points { get; set; }
     }
 }

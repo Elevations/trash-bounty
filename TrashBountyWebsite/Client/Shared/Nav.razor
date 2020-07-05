@@ -40,7 +40,8 @@
         top: 64px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
         transition: 0.3s;
-        left: -200px;
+        left: -100vw;
+        z-index: 1001;
     }
 
     nav div ul.side-nav li {
@@ -74,6 +75,8 @@
             <Authorized>
                 <li><a @onclick="ToggleNav" href="/profile/@context.User.Claims.First(c => c.Type == ClaimTypes.UserData).Value"><i class="fas fa-user"></i><span>PROFILE</span></a></li>
                 <li><a @onclick="ToggleNav" href="/dashboard"><i class="fas fa-trash"></i><span>BOUNTIES</span></a></li>
+                <li><a @onclick="ToggleNav" href="/profile/@context.User.Claims.First(c => c.Type == ClaimTypes.UserData).Value/posted-bounties"><i class="fas fa-trash"></i><span>MY OPEN BOUNTIES</span></a></li>
+                <li><a @onclick="ToggleNav" href="/bounties/closed"><i class="fas fa-trash"></i><span>COMPLETED BOUNTIES</span></a></li>
                 <li><a @onclick="ToggleNavAndLogout"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a></li>
             </Authorized>
             <NotAuthorized>

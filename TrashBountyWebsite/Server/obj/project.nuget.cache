@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "G4t+CUcCXWKAnr1vaKa3EeVMqnpD6PU2QzM4A4s0UmCOL+02ie+F06hKBwob0I5gI0sZLjLr7eT5HAsy+JivOw==",
+  "dgSpecHash": "mf5P1JBhaMwYjS06k3AIadwo7kf8IOy2tEU4hvIGXiBDzkNo80P8+xQaIag/l6DORXULubZyXpskmJg3XiOdBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Server\\TrashBountyWebsite.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mihir\\.nuget\\packages\\aspnetmonsters.blazor.geolocation\\0.5.0-preview1\\aspnetmonsters.blazor.geolocation.0.5.0-preview1.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\blazored.localstorage\\2.1.6\\blazored.localstorage.2.1.6.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
+    "C:\\Users\\Mihir\\.nuget\\packages\\blazorleaflet\\0.4.0-alpha\\blazorleaflet.0.4.0-alpha.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mihir\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

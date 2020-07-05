@@ -11,6 +11,7 @@ using TrashBountyWebsite.Client.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Blazored.LocalStorage;
 using Blazor.FileReader;
+using AspNetMonsters.Blazor.Geolocation;
 
 namespace TrashBountyWebsite.Client
 {
@@ -28,6 +29,7 @@ namespace TrashBountyWebsite.Client
             builder.Services.AddAuthenticationCore();
             builder.Services.AddAuthorizationCore();
             builder.Services.AddFileReaderService();
+            builder.Services.AddSingleton<LocationService>();
 
             await builder.Build().RunAsync();
         }

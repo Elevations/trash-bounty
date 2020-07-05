@@ -10,5 +10,7 @@ namespace TrashBountyLib.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public string ProfileImageLink { get; set; }
+        public List<string> PostedBountyIds { get; set; }
+        public int Points { get; set; }
     }
 }

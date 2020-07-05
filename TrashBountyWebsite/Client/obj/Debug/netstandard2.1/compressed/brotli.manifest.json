@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ypsoQhG0mQVnMmZ4pcPuDMzeEcUu2qI5g9LWduCzgrw=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\T-F3RUyXwzN1xRo1VxchZW05vL8h3e-v1PthCyxd1rk=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\TrashBountyWebsite.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/TrashBountyWebsite.Client.dll.br"
     },
@@ -196,31 +196,6 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Authentication.Abstractions.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GgPlnBZekgBbgO5ZcpY5ih1fLIyoU_XRIrRktlW7gcc=.hash",
-      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Blazor.FileReader.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Blazor.FileReader.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Gu4uE0pVoswvsHyS4Jg1bCSVDCDBnchjCjft14wMkys=.hash",
-      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZFZ7sEO9dexBkfP7iX8zEyLRXGADfimwwKXVNXak0NI=.hash",
-      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Logging.Abstractions.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.Abstractions.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\aONyrXIJFo1fP17yadquiqnzFg30SZIkwRPg0K5nCwo=.hash",
-      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.JSInterop.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\0tyMwROLk1T7Zk3sBPCBmYsmeKF_OXHob6Ivyy7naNU=.hash",
-      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Blazored.LocalStorage.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Blazored.LocalStorage.dll.br"
-    },
-    {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\33IhYBKjxrWcbmnIGD4kH6q-3cdhsozd9s-mFHxDmQ8=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Authorization.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Authorization.dll.br"
@@ -229,6 +204,11 @@
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Eo4ibr4z2OMhtkZs-nT0fhvPDcFkhHMAkezSkPt6gmk=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Metadata.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Metadata.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZFZ7sEO9dexBkfP7iX8zEyLRXGADfimwwKXVNXak0NI=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Logging.Abstractions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.Abstractions.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\INh_HEyd1tejV3ZiCSKTS1pM9lhRRmWPDPOhWVHgiPY=.hash",
@@ -246,7 +226,37 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.ComponentModel.DataAnnotations.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\WhskPkFt19_PDjhXprgP1QwdmX0x82LdPNqPtiu0SOs=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Gu4uE0pVoswvsHyS4Jg1bCSVDCDBnchjCjft14wMkys=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\0tyMwROLk1T7Zk3sBPCBmYsmeKF_OXHob6Ivyy7naNU=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Blazored.LocalStorage.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Blazored.LocalStorage.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\aONyrXIJFo1fP17yadquiqnzFg30SZIkwRPg0K5nCwo=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.JSInterop.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GgPlnBZekgBbgO5ZcpY5ih1fLIyoU_XRIrRktlW7gcc=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Blazor.FileReader.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Blazor.FileReader.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Kte7RHzFnhOlsgWzEqMmilzvw4DAQE6NmgajLj11Wc0=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\AspNetMonsters.Blazor.Geolocation.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/AspNetMonsters.Blazor.Geolocation.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\383hEwDPm5NmglYyk63QxNkPYRYS3YElEs0hWzdTie8=.hash",
+      "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\BlazorLeaflet.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/BlazorLeaflet.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\zqLI3Re98mx16yZHDIMX-OT2-gNR-LlzG9WSueCni9Q=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\TrashBountyLib.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/TrashBountyLib.dll.br"
     },
@@ -451,12 +461,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Ee3Dk1M8AB5ZqVgQIsshCrod0GC2cAk82hOpvRn8gtE=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GQjbgYJqHh-HI5mynIhMRJ90w-3vDyE4Z8NJvKSDn_s=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\TrashBountyWebsite.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/TrashBountyWebsite.Client.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\t4B_5Ta1MGxiQWhellYSFM1gB9jrLVaMZjXG5Zx7Xpo=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\nKYyZM7JRkxIL1EsVicAjgkMl4eBwDtI74AfUCvYad8=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\TrashBountyLib.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/TrashBountyLib.pdb.br"
     },
@@ -481,7 +491,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\dQhxEkRhNdA2nXSqUOtLjd-djQdR4J67AWVXkgFcPj8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZhkKt0qk0CzxMC6vMmSHLwI6w_qGPXlZnDwQeRdZyQE=.hash",
       "Source": "C:\\Users\\Mihir\\Source\\Repos\\TrashBounty\\TrashBountyWebsite\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

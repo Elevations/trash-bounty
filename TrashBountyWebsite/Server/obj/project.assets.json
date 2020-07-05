@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "AspNetMonsters.Blazor.Geolocation/0.5.0-preview1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0-rc1.19457.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNetMonsters.Blazor.Geolocation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNetMonsters.Blazor.Geolocation.dll": {}
+        }
+      },
       "Blazored.LocalStorage/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -32,6 +45,25 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/BlazorInputFile.props": {}
+        }
+      },
+      "BlazorLeaflet/0.4.0-alpha": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0-rc1.19457.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorLeaflet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorLeaflet.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorLeaflet.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorLeaflet.props": {}
         }
       },
       "DnsClient/1.3.1": {
@@ -2579,7 +2611,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "AspNetMonsters.Blazor.Geolocation": "0.5.0-preview1",
           "BlazorInputFile": "0.2.0",
+          "BlazorLeaflet": "0.4.0-alpha",
           "Blazored.LocalStorage": "2.1.6",
           "Microsoft.AspNetCore.Components.Authorization": "3.1.5",
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.0",
@@ -2616,6 +2650,18 @@
     }
   },
   "libraries": {
+    "AspNetMonsters.Blazor.Geolocation/0.5.0-preview1": {
+      "sha512": "Q3gLGSyVKzjwwZ3fso5QBbEOiUDS1pON7zBuYOOevkW5YAadg3mj29gMG3cO1ySu4WyHqH9kH/IlXki+jKwzQg==",
+      "type": "package",
+      "path": "aspnetmonsters.blazor.geolocation/0.5.0-preview1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetmonsters.blazor.geolocation.0.5.0-preview1.nupkg.sha512",
+        "aspnetmonsters.blazor.geolocation.nuspec",
+        "lib/netstandard2.0/AspNetMonsters.Blazor.Geolocation.dll"
+      ]
+    },
     "Blazored.LocalStorage/2.1.6": {
       "sha512": "eTZmwBVJWUdZ0DRI0pTKhtPZHoVfKP+8PDQRR+gStT6ss3IIJ0hhZ+9AtuKxJ/XmE/6fHUkl8U+9niRLsjBoCA==",
       "type": "package",
@@ -2644,6 +2690,23 @@
         "lib/netstandard2.0/BlazorInputFile.dll",
         "lib/netstandard2.1/BlazorInputFile.dll",
         "staticwebassets/inputfile.js"
+      ]
+    },
+    "BlazorLeaflet/0.4.0-alpha": {
+      "sha512": "zwx7kvkfkiW8JyDGojOpZqRsV6UB2SXH4yEiO/EeZgkzy+AP7fLRCe445P8nNwukAFnVG8HEZzNn50Wf3S6Gpg==",
+      "type": "package",
+      "path": "blazorleaflet/0.4.0-alpha",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazorleaflet.0.4.0-alpha.nupkg.sha512",
+        "blazorleaflet.nuspec",
+        "build/BlazorLeaflet.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorLeaflet.props",
+        "buildTransitive/BlazorLeaflet.props",
+        "lib/netstandard2.0/BlazorLeaflet.dll",
+        "staticwebassets/leafletBlazorInterops.js"
       ]
     },
     "DnsClient/1.3.1": {

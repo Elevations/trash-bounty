@@ -6,8 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\CompletedBountie.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\CompletedBountie.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetMonsters.Blazor.Geolocation" Version="0.5.0-preview1" />
     <PackageReference Include="Blazored.LocalStorage" Version="2.1.6" />
     <PackageReference Include="BlazorInputFile" Version="0.2.0" />
+    <PackageReference Include="BlazorLeaflet" Version="0.4.0-alpha" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="3.2.0" />
